@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var sliderValue = 0.0
-    private var randomValue = Double.random(in: 0...100)
+    @State private var randomValue = Double.random(in: 0...100)
     
     var body: some View {
         
@@ -23,11 +23,12 @@ struct ContentView: View {
             
             SliderView(sliderValue: $sliderValue)
                 
-            Button("Проверь меня") {
+            Button("Проверь меня!") {
                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
             }
-            Button("Начать заново") {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+            Button("Начать заново!") {
+                sliderValue = 0.0
+                randomValue = Double.random(in: 0...100)
             }
         }
         .padding()
