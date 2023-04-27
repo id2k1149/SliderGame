@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var currentValue = 0.0
     @State private var targetValue = Int.random(in: 0...100)
+    @State private var showAlert = false
     
     var body: some View {
         
@@ -18,13 +19,21 @@ struct ContentView: View {
             
             HStack {
                 Text("Подвинь слайдер, как можно ближе к: ")
-                Text("\(lround(Double(targetValue)))")
+                Text("\(targetValue)")
             }
             
             SliderView(sliderValue: $currentValue)
                 
             Button("Проверь меня!") {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                showAlert = true
+            }
+            .alert(isPresented: $showAlert) {
+                let message = computeScore().formatted()
+            
+                return Alert(
+                    title: Text("Your Score"),
+                    message: Text(message)
+                )
             }
             Button("Начать заново!") {
                 currentValue = 0.0
