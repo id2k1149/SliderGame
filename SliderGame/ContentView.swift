@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var sliderValue = 0.0
+    private var randomValue = Double.random(in: 0...100)
+    
     var body: some View {
+        
         VStack(spacing: 32) {
+            Text("\(lround(sliderValue))")
+            
             HStack {
                 Text("Подвинь слайдер, как можно ближе к: ")
-                Text("82")
+                Text("\(lround(randomValue))")
             }
-            HStack {
-                Text("0")
-                Slider(value: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant(10)/*@END_MENU_TOKEN@*/)
-                Text("100")
-            }
-           
+            
+            SliderView(sliderValue: $sliderValue)
+                
             Button("Проверь меня") {
                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
             }
