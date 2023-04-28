@@ -20,10 +20,11 @@ struct ContentView: View {
             HStack {
                 Text("Подвинь слайдер, как можно ближе к: ")
                 Text("\(targetValue)")
+                    .fixedSize(horizontal: true,
+                               vertical: false)
+                    .frame(width: 32)
             }
             
-//            SliderViewControllerRepresentation()
-//            SliderUIView(sliderValue: $currentValue)
             HStack {
                 Text("0")
                 SliderView(sliderValue: $currentValue,
@@ -43,7 +44,7 @@ struct ContentView: View {
                 )
             }
             Button("Начать заново!") {
-                currentValue = 50.0
+                currentValue = 0.0
                 targetValue = Int.random(in: 0...100)
             }
         }
