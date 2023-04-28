@@ -26,7 +26,8 @@ struct ContentView: View {
 //            SliderUIView(sliderValue: $currentValue)
             HStack {
                 Text("0")
-                SliderView(sliderValue: $currentValue)
+                SliderView(sliderValue: $currentValue,
+                           targetValue: $targetValue)
                 Text("100")
             }
                 
@@ -42,7 +43,7 @@ struct ContentView: View {
                 )
             }
             Button("Начать заново!") {
-                currentValue = 0.0
+                currentValue = 50.0
                 targetValue = Int.random(in: 0...100)
             }
         }
