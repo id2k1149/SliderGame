@@ -22,8 +22,13 @@ struct ContentView: View {
                 Text("\(targetValue)")
             }
             
-            SliderViewControllerRepresentation()
+//            SliderViewControllerRepresentation()
 //            SliderUIView(sliderValue: $currentValue)
+            HStack {
+                Text("0")
+                SliderView(sliderValue: $currentValue)
+                Text("100")
+            }
                 
             Button("Проверь меня!") {
                 showAlert = true

@@ -1,5 +1,5 @@
 //
-//  Slider.swift
+//  SliderView.swift
 //  SliderGame
 //
 //  Created by Max Franz Immelmann on 4/28/23.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct Slider: UIViewRepresentable {
+struct SliderView: UIViewRepresentable {
     @Binding var sliderValue: Double
     
     func makeUIView(context: Context) -> UISlider {
         let slider = UISlider()
-        slider.value = 0
+        slider.value = Float(sliderValue)
         slider.minimumValue = 0
         slider.maximumValue = 100
         slider.thumbTintColor = UIColor.red.withAlphaComponent(1)
@@ -27,6 +27,6 @@ struct Slider: UIViewRepresentable {
 
 struct Slider_Previews: PreviewProvider {
     static var previews: some View {
-        Slider(sliderValue: .constant(0.0))
+        SliderView(sliderValue: .constant(0.0))
     }
 }
