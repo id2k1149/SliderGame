@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		507A7F5729FC1A02003E54AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 507A7F5529FC1A02003E54AB /* Main.storyboard */; };
+		507A7F5829FC1A02003E54AB /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507A7F5629FC1A02003E54AB /* SliderViewController.swift */; };
 		50816E8A29FAAE9400219D85 /* SliderGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50816E8929FAAE9400219D85 /* SliderGameApp.swift */; };
 		50816E8C29FAAE9400219D85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50816E8B29FAAE9400219D85 /* ContentView.swift */; };
 		50816E8E29FAAE9700219D85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50816E8D29FAAE9700219D85 /* Assets.xcassets */; };
 		50816E9129FAAE9700219D85 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50816E9029FAAE9700219D85 /* Preview Assets.xcassets */; };
 		50816E9829FAB13500219D85 /* SliderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50816E9729FAB13500219D85 /* SliderUIView.swift */; };
+		50816EBA29FAF59400219D85 /* SliderViewControllerV01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50816EB929FAF59400219D85 /* SliderViewControllerV01.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		507A7F5529FC1A02003E54AB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		507A7F5629FC1A02003E54AB /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 		50816E8629FAAE9400219D85 /* SliderGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SliderGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50816E8929FAAE9400219D85 /* SliderGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderGameApp.swift; sourceTree = "<group>"; };
 		50816E8B29FAAE9400219D85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		50816E8D29FAAE9700219D85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50816E9029FAAE9700219D85 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		50816E9729FAB13500219D85 /* SliderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderUIView.swift; sourceTree = "<group>"; };
+		50816EB929FAF59400219D85 /* SliderViewControllerV01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewControllerV01.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 				50816E8929FAAE9400219D85 /* SliderGameApp.swift */,
 				50816E8B29FAAE9400219D85 /* ContentView.swift */,
 				50816E9729FAB13500219D85 /* SliderUIView.swift */,
+				50816EB929FAF59400219D85 /* SliderViewControllerV01.swift */,
+				507A7F5629FC1A02003E54AB /* SliderViewController.swift */,
+				507A7F5529FC1A02003E54AB /* Main.storyboard */,
 				50816E8D29FAAE9700219D85 /* Assets.xcassets */,
 				50816E8F29FAAE9700219D85 /* Preview Content */,
 			);
@@ -128,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				507A7F5729FC1A02003E54AB /* Main.storyboard in Resources */,
 				50816E9129FAAE9700219D85 /* Preview Assets.xcassets in Resources */,
 				50816E8E29FAAE9700219D85 /* Assets.xcassets in Resources */,
 			);
@@ -141,8 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				50816E9829FAB13500219D85 /* SliderUIView.swift in Sources */,
+				507A7F5829FC1A02003E54AB /* SliderViewController.swift in Sources */,
 				50816E8C29FAAE9400219D85 /* ContentView.swift in Sources */,
 				50816E8A29FAAE9400219D85 /* SliderGameApp.swift in Sources */,
+				50816EBA29FAF59400219D85 /* SliderViewControllerV01.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

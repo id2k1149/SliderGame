@@ -22,7 +22,7 @@ struct ContentView: View {
                 Text("\(targetValue)")
             }
             
-            SliderUIView(sliderValue: $currentValue)
+//            SliderUIView(sliderValue: $currentValue)
                 
             Button("Проверь меня!") {
                 showAlert = true
