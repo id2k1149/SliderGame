@@ -1,12 +1,12 @@
 //
-//  ViewController.swift
+//  SliderViewControllerV01.swift
 //  Slider
 //
 //  Created by Max Franz Immelmann on 4/27/23.
 //
 
 import SwiftUI
-
+/*
 class SliderViewControllerV01: UIViewController {
     let slider = UISlider()
 
@@ -45,6 +45,7 @@ class SliderViewControllerV01: UIViewController {
         print("Slider value changed to: \(sender.value)")
     }
 }
+ */
 
 /*
 struct SliderViewControllerRepresentation: UIViewControllerRepresentable {

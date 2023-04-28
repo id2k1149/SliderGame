@@ -22,6 +22,7 @@ struct ContentView: View {
                 Text("\(targetValue)")
             }
             
+            SliderViewControllerRepresentation()
 //            SliderUIView(sliderValue: $currentValue)
                 
             Button("Проверь меня!") {

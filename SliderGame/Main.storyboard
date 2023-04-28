@@ -16,17 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="nGR-AC-a3V">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nGR-AC-a3V">
                                 <rect key="frame" x="16" y="391" width="343" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lme-sp-enH">
-                                        <rect key="frame" x="0.0" y="0.0" width="10.333333333333334" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="10" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FCD-pf-U3C">
-                                        <rect key="frame" x="22.333333333333343" y="0.0" width="280.33333333333326" height="31"/>
+                                        <rect key="frame" x="24" y="0.0" width="276.66666666666674" height="31"/>
                                         <connections>
                                             <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="Zpn-z9-Pwv"/>
                                         </connections>
@@ -43,7 +43,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nGR-AC-a3V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AgP-03-hfH"/>
                             <constraint firstItem="nGR-AC-a3V" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IlW-4h-Tnf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nGR-AC-a3V" secondAttribute="trailing" constant="16" id="eJw-h5-eCa"/>
                             <constraint firstItem="nGR-AC-a3V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zFD-w5-Vsl"/>
