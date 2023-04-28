@@ -23,8 +23,7 @@ struct SliderView: UIViewRepresentable {
             action: #selector(Coordinator.sliderValueChanged),
             for: .valueChanged)
         
-        let alphaComponent = 1 - slider.value / 100
-        slider.thumbTintColor = UIColor.red.withAlphaComponent(CGFloat(alphaComponent))
+        slider.thumbTintColor = UIColor.red.withAlphaComponent(1)
         
         return slider
     }
@@ -32,6 +31,9 @@ struct SliderView: UIViewRepresentable {
     func updateUIView(_ uiView: UISlider, context: Context) {
         uiView.value = Float(sliderValue)
         print("updatedSliderValue = \(sliderValue)")
+        let alphaComponent = uiView.value / Float(targetValue)
+        print("alphaComponent = \(alphaComponent)")
+        uiView.thumbTintColor = UIColor.red.withAlphaComponent(CGFloat(alphaComponent))
     }
     
     func makeCoordinator() -> Coordinator {
