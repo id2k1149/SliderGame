@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var currentValue = 0.0
+    @State private var currentValue: Float = 0.0
     @State private var targetValue = Int.random(in: 0...100)
     @State private var showAlert = false
     
     var body: some View {
         
         VStack(spacing: 32) {
-            Text("\(lround(currentValue))")
-            
             HStack {
                 Text("Подвинь слайдер, как можно ближе к: ")
                 Text("\(targetValue)")
@@ -52,7 +50,7 @@ struct ContentView: View {
     }
     
     private func computeScore() -> Int {
-        let difference = abs(targetValue - lround(currentValue))
+        let difference = abs(targetValue - lrintf(currentValue))
         return 100 - difference
     }
 }
