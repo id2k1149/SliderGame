@@ -14,6 +14,9 @@ struct ContentView: View {
     
     var body: some View {
         
+        let score = computeScore()
+        let alphaComponent = Double(score) / 100.0
+        
         VStack(spacing: 32) {
             HStack {
                 Text("Подвинь слайдер, как можно ближе к: ")
@@ -26,7 +29,7 @@ struct ContentView: View {
             HStack {
                 Text("0")
                 SliderView(sliderValue: $currentValue,
-                           targetValue: $targetValue)
+                           alphaComponent: alphaComponent)
                 Text("100")
             }
                 
@@ -34,7 +37,7 @@ struct ContentView: View {
                 showAlert = true
             }
             .alert(isPresented: $showAlert) {
-                let message = computeScore().formatted()
+                let message = score.formatted()
             
                 return Alert(
                     title: Text("Your Score"),
