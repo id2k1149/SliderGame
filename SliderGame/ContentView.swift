@@ -42,7 +42,6 @@ struct ContentView: View {
                 )
             }
             Button("Начать заново!") {
-                currentValue = 0.0
                 targetValue = Int.random(in: 0...100)
             }
         }
