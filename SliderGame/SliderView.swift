@@ -27,7 +27,7 @@ struct SliderView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UISlider, context: Context) {
-        uiView.value = Float(sliderValue)
+        uiView.value = sliderValue
         uiView.thumbTintColor = UIColor.red.withAlphaComponent(CGFloat(alphaComponent))
     }
     
