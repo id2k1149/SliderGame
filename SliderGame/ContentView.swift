@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var currentValue: Float = 0.0
+    @State private var currentValue = Double.random(in: 0...100)
     @State private var targetValue = Int.random(in: 0...100)
     @State private var showAlert = false
     
     var body: some View {
         
-        let score = computeScore()
-        let alphaComponent = Double(score) / 100.0
+        let alphaComponent = computeScore()
         
         VStack(spacing: 32) {
             HStack {
@@ -37,7 +36,7 @@ struct ContentView: View {
                 showAlert = true
             }
             .alert(isPresented: $showAlert) {
-                let message = score.formatted()
+                let message = computeScore().formatted()
             
                 return Alert(
                     title: Text("Your Score"),
@@ -45,6 +44,7 @@ struct ContentView: View {
                 )
             }
             Button("Начать заново!") {
+                currentValue = Double.random(in: 0...100)
                 targetValue = Int.random(in: 0...100)
             }
         }
@@ -52,7 +52,7 @@ struct ContentView: View {
     }
     
     private func computeScore() -> Int {
-        let difference = abs(targetValue - lrintf(currentValue))
+        let difference = abs(targetValue - lround(currentValue))
         return 100 - difference
     }
 }
